@@ -267,206 +267,29 @@ public class HelloApplication extends Application {
             }
         });
 
-        // set functionality for number buttons
-        button0.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "0";
-                    currentDisplay.setText("0");
-                } else if (currentOperand == null) {
-                    currentArg1 += "0";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "0";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "0";
-                    currentDisplay.setText(currentDisplay.getText() + "0");
-                }
-            }
-        });
+        // set number button id's
+        button0.setId("0");
+        button1.setId("1");
+        button2.setId("2");
+        button3.setId("3");
+        button4.setId("4");
+        button5.setId("5");
+        button6.setId("6");
+        button7.setId("7");
+        button8.setId("8");
+        button9.setId("9");
 
-        button1.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "1";
-                    currentDisplay.setText("1");
-                } else if (currentOperand == null) {
-                    currentArg1 += "1";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "1";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "1";
-                    currentDisplay.setText(currentDisplay.getText() + "1");
-                }
-            }
-        });
-
-        button2.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "2";
-                    currentDisplay.setText("2");
-                } else if (currentOperand == null) {
-                    currentArg1 += "2";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "2";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "2";
-                    currentDisplay.setText(currentDisplay.getText() + "2");
-                }
-            }
-        });
-
-        button3.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "3";
-                    currentDisplay.setText("3");
-                } else if (currentOperand == null) {
-                    currentArg1 += "3";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "3";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "3";
-                    currentDisplay.setText(currentDisplay.getText() + "3");
-                }
-            }
-        });
-
-        button4.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "4";
-                    currentDisplay.setText("4");
-                } else if (currentOperand == null) {
-                    currentArg1 += "4";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "4";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "4";
-                    currentDisplay.setText(currentDisplay.getText() + "4");
-                }
-            }
-        });
-
-        button5.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "5";
-                    currentDisplay.setText("5");
-                } else if (currentOperand == null) {
-                    currentArg1 += "5";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "5";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "5";
-                    currentDisplay.setText(currentDisplay.getText() + "5");
-                }
-            }
-        });
-
-        button6.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "6";
-                    currentDisplay.setText("6");
-                } else if (currentOperand == null) {
-                    currentArg1 += "6";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "6";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "6";
-                    currentDisplay.setText(currentDisplay.getText() + "6");
-                }
-            }
-        });
-
-        button7.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "7";
-                    currentDisplay.setText("7");
-                } else if (currentOperand == null) {
-                    currentArg1 += "7";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "7";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "7";
-                    currentDisplay.setText(currentDisplay.getText() + "7");
-                }
-            }
-        });
-
-        button8.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "8";
-                    currentDisplay.setText("8");
-                } else if (currentOperand == null) {
-                    currentArg1 += "8";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "8";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "8";
-                    currentDisplay.setText(currentDisplay.getText() + "8");
-                }
-            }
-        });
-
-        button9.setOnAction(new EventHandler<ActionEvent>() {
-            public void handle(ActionEvent actionEvent) {
-                // check if StartNewEquation is True
-                if (startNewEquation) {
-                    startNewEquation = false;
-                    currentArg1 = "9";
-                    currentDisplay.setText("9");
-                } else if (currentOperand == null) {
-                    currentArg1 += "9";
-                    currentDisplay.setText(currentArg1);
-                } else if (currentArg2 == null) {
-                    currentArg2 = "9";
-                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
-                } else {
-                    currentArg2 += "9";
-                    currentDisplay.setText(currentDisplay.getText() + "9");
-                }
-            }
-        });
+        // set number button functionality
+        setNumberButtonFunctionality(button0, currentDisplay);
+        setNumberButtonFunctionality(button1, currentDisplay);
+        setNumberButtonFunctionality(button2, currentDisplay);
+        setNumberButtonFunctionality(button3, currentDisplay);
+        setNumberButtonFunctionality(button4, currentDisplay);
+        setNumberButtonFunctionality(button5, currentDisplay);
+        setNumberButtonFunctionality(button6, currentDisplay);
+        setNumberButtonFunctionality(button7, currentDisplay);
+        setNumberButtonFunctionality(button8, currentDisplay);
+        setNumberButtonFunctionality(button9, currentDisplay);
 
         // show stage
         stage.show();
@@ -496,6 +319,29 @@ public class HelloApplication extends Application {
             } return argument1 % argument2;
         }
 
+    }
+
+    public void setNumberButtonFunctionality(Button button, Label currentDisplay) {
+        String id = button.getId();
+        button.setOnAction(new EventHandler<ActionEvent>() {
+            public void handle(ActionEvent actionEvent) {
+                // check if StartNewEquation is True
+                if (startNewEquation) {
+                    startNewEquation = false;
+                    currentArg1 = id;
+                    currentDisplay.setText(id);
+                } else if (currentOperand == null) {
+                    currentArg1 += id;
+                    currentDisplay.setText(currentArg1);
+                } else if (currentArg2 == null) {
+                    currentArg2 = id;
+                    currentDisplay.setText(currentDisplay.getText() + currentArg2);
+                } else {
+                    currentArg2 += id;
+                    currentDisplay.setText(currentDisplay.getText() + id);
+                }
+            }
+        });
     }
 
     public static void main(String[] args) {

@@ -29,7 +29,6 @@ public class HelloApplication extends Application {
         VBox root = new VBox();
         // set scene
         Scene scene = new Scene(root, 200, 170);
-//        scene.getStylesheets().add("HelloApplication.css");
         stage.setScene(scene);
         stage.setResizable(false);
         // create currentDisplay label
@@ -99,7 +98,6 @@ public class HelloApplication extends Application {
         // set functionality for clear button
         buttonClear.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Clear was clicked!");
                 currentDisplay.setText("Start Calculating");
                 // reset arguments and current operand
                 currentArg1 = null;
@@ -111,7 +109,6 @@ public class HelloApplication extends Application {
         // set functionality for operands
         buttonAdd.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Multiply was clicked!");
                 // if all args and operands are valid, compute equation
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
@@ -139,7 +136,6 @@ public class HelloApplication extends Application {
 
         buttonSubtract.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Subtract was clicked!");
                 // if all args and operands are valid, compute equation
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
@@ -167,7 +163,6 @@ public class HelloApplication extends Application {
 
         buttonDivide.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Divide was clicked!");
                 // if all args and operands are valid, compute equation
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
@@ -195,7 +190,6 @@ public class HelloApplication extends Application {
 
         buttonMultiply.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Multiply was clicked!");
                 // if all args and operands are valid, compute equation
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
@@ -223,7 +217,6 @@ public class HelloApplication extends Application {
 
         buttonModulo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Modulo was clicked!");
                 // if all args and operands are valid, compute equation
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
@@ -252,7 +245,6 @@ public class HelloApplication extends Application {
         // set functionality for equals button
         buttonEquals.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button Equals was clicked!");
                 // set StartNewEquation to True
                 startNewEquation = true;
                 // check if arg1, operand and arg2 are present
@@ -277,7 +269,6 @@ public class HelloApplication extends Application {
         // set functionality for number buttons
         button0.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 0 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -298,7 +289,6 @@ public class HelloApplication extends Application {
 
         button1.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 1 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -319,7 +309,6 @@ public class HelloApplication extends Application {
 
         button2.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 2 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -340,7 +329,6 @@ public class HelloApplication extends Application {
 
         button3.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 3 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -361,7 +349,6 @@ public class HelloApplication extends Application {
 
         button4.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 4 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -382,7 +369,6 @@ public class HelloApplication extends Application {
 
         button5.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 5 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -403,7 +389,6 @@ public class HelloApplication extends Application {
 
         button6.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 6 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -424,7 +409,6 @@ public class HelloApplication extends Application {
 
         button7.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 7 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -445,7 +429,6 @@ public class HelloApplication extends Application {
 
         button8.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 8 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;
@@ -466,7 +449,6 @@ public class HelloApplication extends Application {
 
         button9.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
-                System.out.println("Button 9 was clicked!");
                 // check if StartNewEquation is True
                 if (startNewEquation) {
                     startNewEquation = false;

@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
     String currentArg2 = null;
     String currentOperand = null;
     boolean startNewEquation = true;
-    public static final String divError = "Div By Zero Error";
+    public static final String ZERODIVERROR = "Div By Zero Error";
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -114,7 +114,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         startNewEquation = true;
                         currentArg1 = null;
                         currentOperand = null;
@@ -141,7 +141,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         startNewEquation = true;
                         currentArg1 = null;
                         currentOperand = null;
@@ -168,7 +168,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         startNewEquation = true;
                         currentArg1 = null;
                         currentOperand = null;
@@ -195,7 +195,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         startNewEquation = true;
                         currentArg1 = null;
                         currentOperand = null;
@@ -222,7 +222,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         startNewEquation = true;
                         currentArg1 = null;
                         currentOperand = null;
@@ -252,7 +252,7 @@ public class HelloApplication extends Application {
                 if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
                     double answer = calculate(currentArg1, currentOperand, currentArg2);
                     if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(divError);
+                        currentDisplay.setText(ZERODIVERROR);
                         currentArg1 = null;
                         currentOperand = null;
                         currentArg2 = null;

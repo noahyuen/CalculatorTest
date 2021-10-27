@@ -21,7 +21,7 @@ public class HelloApplication extends Application {
     String currentArg2 = null;
     String currentOperand = null;
     boolean startNewEquation = true;
-    final static String divError = "Div By Zero Error";
+    public static final String divError = "Div By Zero Error";
 
     @Override
     public void start(Stage stage) throws IOException {

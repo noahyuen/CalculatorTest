@@ -1,0 +1,7 @@
+organization=noahyuen
+projectKey=noahyuen_CalculatorTest
+serverUrl=https://sonarcloud.io
+serverVersion=8.0.0.24335
+dashboardUrl=https://sonarcloud.io/dashboard?id=noahyuen_CalculatorTest
+ceTaskId=AXzBVwYOExg_r8_hu1dM
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AXzBVwYOExg_r8_hu1dM

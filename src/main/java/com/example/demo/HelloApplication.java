@@ -1,5 +1,4 @@
 package com.example.demo;
-
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -12,17 +11,13 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-
 import java.io.IOException;
-
 public class HelloApplication extends Application {
-
     String currentArg1 = null;
     String currentArg2 = null;
     String currentOperand = null;
     boolean startNewEquation = true;
     public static final String ZERODIVERROR = "Div By Zero Error";
-
     @Override
     public void start(Stage stage) throws IOException {
         stage.setTitle("Calculator");
@@ -58,7 +53,6 @@ public class HelloApplication extends Application {
         Button buttonSubtract = new Button("-");
         Button buttonAdd = new Button("+");
         Button buttonEquals = new Button("=");
-
         // set button widths
         button0.setPrefWidth(50);
         button1.setPrefWidth(50);
@@ -79,14 +73,12 @@ public class HelloApplication extends Application {
         buttonSubtract.setPrefWidth(50);
         buttonAdd.setPrefWidth(50);
         buttonEquals.setPrefWidth(50);
-
         // create HBoxes
         HBox row1 = new HBox();
         HBox row2 = new HBox();
         HBox row3 = new HBox();
         HBox row4 = new HBox();
         HBox row5 = new HBox();
-
         // set HBox children
         row1.getChildren().addAll(buttonClear, buttonNegative, buttonModulo, buttonDivide);
         row2.getChildren().addAll(button7, button8, button9, buttonMultiply);
@@ -95,7 +87,6 @@ public class HelloApplication extends Application {
         row5.getChildren().addAll(button0, buttonDecimal, buttonEquals);
         // set VBox children
         root.getChildren().addAll(currentDisplay, row1, row2, row3, row4, row5);
-
         // set functionality for clear button
         buttonClear.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -106,7 +97,6 @@ public class HelloApplication extends Application {
                 currentArg2 = null;
             }
         });
-
         // set functionality for operands
         buttonAdd.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -134,7 +124,6 @@ public class HelloApplication extends Application {
                 }
             }
         });
-
         buttonSubtract.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
@@ -161,7 +150,6 @@ public class HelloApplication extends Application {
                 }
             }
         });
-
         buttonDivide.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
@@ -188,7 +176,6 @@ public class HelloApplication extends Application {
                 }
             }
         });
-
         buttonMultiply.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
@@ -215,7 +202,6 @@ public class HelloApplication extends Application {
                 }
             }
         });
-
         buttonModulo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
@@ -242,7 +228,6 @@ public class HelloApplication extends Application {
                 }
             }
         });
-
         // set functionality for equals button
         buttonEquals.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -263,10 +248,8 @@ public class HelloApplication extends Application {
                         currentArg2 = null;
                     }
                 }
-
             }
         });
-
         // set number button id's
         button0.setId("0");
         button1.setId("1");
@@ -278,7 +261,6 @@ public class HelloApplication extends Application {
         button7.setId("7");
         button8.setId("8");
         button9.setId("9");
-
         // set number button functionality
         setNumberButtonFunctionality(button0, currentDisplay);
         setNumberButtonFunctionality(button1, currentDisplay);
@@ -290,11 +272,9 @@ public class HelloApplication extends Application {
         setNumberButtonFunctionality(button7, currentDisplay);
         setNumberButtonFunctionality(button8, currentDisplay);
         setNumberButtonFunctionality(button9, currentDisplay);
-
         // show stage
         stage.show();
     }
-
     private static double calculate(String arg1, String operand, String arg2) {
         double argument1 = Double.parseDouble(arg1);
         double argument2 = Double.parseDouble(arg2);
@@ -318,9 +298,7 @@ public class HelloApplication extends Application {
                 return Double.POSITIVE_INFINITY;
             } return argument1 % argument2;
         }
-
     }
-
     public void setNumberButtonFunctionality(Button button, Label currentDisplay) {
         String id = button.getId();
         button.setOnAction(new EventHandler<ActionEvent>() {
@@ -343,7 +321,6 @@ public class HelloApplication extends Application {
             }
         });
     }
-
     public static void main(String[] args) {
         launch();
     }

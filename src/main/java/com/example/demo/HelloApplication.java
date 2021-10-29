@@ -53,7 +53,7 @@ public class HelloApplication extends Application {
         Button buttonSubtract = new Button("-");
         Button buttonAdd = new Button("+");
         Button buttonEquals = new Button("=");
-        Button buttonLog = new Button("log");
+        Button buttonLog = new Button("log10");
         // set button widths
         button0.setPrefWidth(50);
         button1.setPrefWidth(50);
@@ -105,7 +105,7 @@ public class HelloApplication extends Application {
                 // if all args and operands are valid, compute equation
                 calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
-                performNewOperation(currentDisplay, "-");
+                performNewOperation(currentDisplay, "+");
             }
         });
 

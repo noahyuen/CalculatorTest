@@ -103,133 +103,62 @@ public class HelloApplication extends Application {
         buttonAdd.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
+                calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
-                if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = false;
-                    currentOperand = "+";
-                    currentDisplay.setText(currentDisplay.getText() + "+");
-                }
+                performNewOperation(currentDisplay, "-");
             }
         });
+
         buttonSubtract.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
+                calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
-                if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = false;
-                    currentOperand = "-";
-                    currentDisplay.setText(currentDisplay.getText() + "-");
-                }
+                performNewOperation(currentDisplay, "-");
             }
         });
+
         buttonDivide.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
+                calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
-                if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = false;
-                    currentOperand = "/";
-                    currentDisplay.setText(currentDisplay.getText() + "/");
-                }
+                performNewOperation(currentDisplay, "/");
             }
         });
+
         buttonMultiply.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
+                calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
-                if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = false;
-                    currentOperand = "X";
-                    currentDisplay.setText(currentDisplay.getText() + "X");
-                }
+                performNewOperation(currentDisplay, "X");
             }
         });
+
         buttonModulo.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
                 // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
+                calculateCurrentEquation(currentDisplay);
+                // if no operand is None, set current Operand
+                performNewOperation(currentDisplay, "%");
+            }
+        });
+
+        buttonLog.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent actionEvent) {
+                calculateCurrentEquation(currentDisplay);
                 // if no operand is None, set current Operand
                 if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = false;
-                    currentOperand = "%";
-                    currentDisplay.setText(currentDisplay.getText() + "%");
+                    startNewEquation = true;
+                    double log = Math.log10(Double.parseDouble(currentArg1));
+                    currentArg1 = Double.toString(log);
+                    currentDisplay.setText(Double.toString(log));
                 }
             }
         });
+
         // set functionality for equals button
         buttonEquals.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent actionEvent) {
@@ -253,34 +182,6 @@ public class HelloApplication extends Application {
             }
         });
 
-        buttonLog.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent actionEvent) {
-                // if all args and operands are valid, compute equation
-                if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
-                    double answer = calculate(currentArg1, currentOperand, currentArg2);
-                    if (answer == Double.POSITIVE_INFINITY) {
-                        currentDisplay.setText(ZERODIVERROR);
-                        startNewEquation = true;
-                        currentArg1 = null;
-                        currentOperand = null;
-                        currentArg2 = null;
-                    } else {
-                        currentDisplay.setText(Double.toString(answer));
-                        currentArg1 = Double.toString(answer);
-                        currentOperand = null;
-                        currentArg2 = null;
-                    }
-                }
-                // if no operand is None, set current Operand
-                if (currentOperand == null && currentArg1 != null) {
-                    startNewEquation = true;
-                    double log = Math.log10(Double.parseDouble(currentArg1));
-                    currentArg1 = Double.toString(log);
-                    currentDisplay.setText(Double.toString(log));
-                }
-            }
-        });
         // set number button id's
         button0.setId("0");
         button1.setId("1");
@@ -330,6 +231,7 @@ public class HelloApplication extends Application {
             } return argument1 % argument2;
         }
     }
+
     public void setNumberButtonFunctionality(Button button, Label currentDisplay) {
         String id = button.getId();
         button.setOnAction(new EventHandler<ActionEvent>() {
@@ -352,6 +254,34 @@ public class HelloApplication extends Application {
             }
         });
     }
+
+    public void calculateCurrentEquation(Label currentDisplay) {
+        if (currentArg1 != null && currentOperand != null && currentArg2 != null) {
+            double answer = calculate(currentArg1, currentOperand, currentArg2);
+            if (answer == Double.POSITIVE_INFINITY) {
+                currentDisplay.setText(ZERODIVERROR);
+                startNewEquation = true;
+                currentArg1 = null;
+                currentOperand = null;
+                currentArg2 = null;
+            } else {
+                currentDisplay.setText(Double.toString(answer));
+                currentArg1 = Double.toString(answer);
+                currentOperand = null;
+                currentArg2 = null;
+            }
+        }
+    }
+
+    public void performNewOperation(Label currentDisplay, String operation) {
+        if (currentOperand == null && currentArg1 != null) {
+            startNewEquation = false;
+            currentOperand = operation;
+            currentDisplay.setText(currentDisplay.getText() + operation);
+        }
+    }
+
+
     public static void main(String[] args) {
         launch();
     }

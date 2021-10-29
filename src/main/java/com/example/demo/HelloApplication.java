@@ -53,6 +53,7 @@ public class HelloApplication extends Application {
         Button buttonSubtract = new Button("-");
         Button buttonAdd = new Button("+");
         Button buttonEquals = new Button("=");
+        Button buttonLog = new Button("log");
         // set button widths
         button0.setPrefWidth(50);
         button1.setPrefWidth(50);
@@ -73,6 +74,7 @@ public class HelloApplication extends Application {
         buttonSubtract.setPrefWidth(50);
         buttonAdd.setPrefWidth(50);
         buttonEquals.setPrefWidth(50);
+        buttonLog.setPrefWidth(50);
         // create HBoxes
         HBox row1 = new HBox();
         HBox row2 = new HBox();
@@ -84,7 +86,7 @@ public class HelloApplication extends Application {
         row2.getChildren().addAll(button7, button8, button9, buttonMultiply);
         row3.getChildren().addAll(button4, button5, button6, buttonSubtract);
         row4.getChildren().addAll(button1, button2, button3, buttonAdd);
-        row5.getChildren().addAll(button0, buttonDecimal, buttonEquals);
+        row5.getChildren().addAll(button0, buttonDecimal, buttonEquals, buttonLog);
         // set VBox children
         root.getChildren().addAll(currentDisplay, row1, row2, row3, row4, row5);
         // set functionality for clear button
